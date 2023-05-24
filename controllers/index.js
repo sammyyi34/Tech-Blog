@@ -1,8 +1,6 @@
 const router = require('express').Router();
+const apiRoutes = require('./api');
 
-// localhost:3001/
-router.get('/', (req, res) => {
-  res.json('Hi');
-})
+router.use('/api', apiRoutes);
 
 module.exports = router;
