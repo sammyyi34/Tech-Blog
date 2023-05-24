@@ -6,6 +6,8 @@ const models = require('./models')
 const PORT = 3001;
 const app = express();
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(controllers)
 
 // connect to database and then to the server
